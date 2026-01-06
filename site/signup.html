@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce Sign Up</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style/style.css">
+  <style>
+    :root {
+      --green-main: #198754;
+      --green-dark: #0f5132;
+    }
+
+    .btn-green {
+      background-color: var(--green-main);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-green:hover {
+      background-color: var(--green-dark);
+    }
+
+    a { color: var(--green-main); }
+    a:hover { color: var(--green-dark); }
+
+    .form-control:focus {
+      border-color: var(--green-main);
+      box-shadow: 0 0 0 0.2rem rgba(25,135,84,.25);
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container-fluid bg-navbar fixed-top">
+        <div class="container">
+ <nav class="navbar">
+        <div class="logo">LC-Official</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="about_lc.html">About LC</a></li>
+            <li><a href="branches.html">Branches</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="why_lc.html">Why LC</a></li>
+            <li><a href="get_intouch.html">Get in Touch</a></li>
+            <li><a href="login.html" class="btn btn-warning btn-sm text-white"><i class="fa fas fa-user"></i> Log In</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+        </div>
+    </div>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg p-4 rounded-4" style="max-width: 520px; width: 100%;">
+
+    <h3 class="text-center text-success mb-4">Create Account</h3>
+
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input type="tel" class="form-control" placeholder="+231..." required>
+      </div>
+
+      <!-- User Role -->
+      <div class="mb-3">
+        <label class="form-label">Account Type</label>
+        <select class="form-select" required>
+          <option value="">Select role</option>
+          <option value="buyer">Buyer</option>
+          <option value="seller">Seller</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" required>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" required>
+        <label class="form-check-label">
+          I agree to the <a href="#">Terms & Conditions</a>
+        </label>
+      </div>
+
+      <button class="btn btn-green w-100">Create Account</button>
+    </form>
+
+    <p class="text-center mt-3">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+
+  </div>
+</div>
+
+
+<script src="/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
