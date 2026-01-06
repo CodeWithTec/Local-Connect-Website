@@ -32,6 +32,23 @@
     a:hover {
       color: var(--green-dark);
     }
+
+    /* Input Focus Styles */
+    .form-control:focus {
+      border-color: var(--green-main);
+      box-shadow: 0 0 0 0.2rem rgba(25,135,84,.25);
+    }
+    /* mobile responsive */
+    @media (max-width: 576px) {
+      .card {
+        width: 90%;
+      }
+    }
+    @media (max-width: 976px) {
+        .card {
+          width: 70%;
+        }
+    }
   </style>
 </head>
 <body class="bg-light">
