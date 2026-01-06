@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-main: #198754;
+      --green-dark: #0f5132;
+    }
+
+    body, html {
+      margin: 0;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+    }
+
+    .topbar {
+      background-color: var(--green-main);
+      color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .btn-green {
+      background-color: var(--green-main);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-green:hover {
+      background-color: var(--green-dark);
+    }
+
+    .cart-card {
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .quantity-input {
+      width: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cart-item img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-4">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <h5 class="m-0">Shopping Cart</h5>
+    <a href="browse_products.html" class="btn btn-light text-dark">Continue Shopping</a>
+  </div>
+
+  <!-- Cart Items -->
+  <div class="cart-card cart-item d-flex align-items-center justify-content-between shadow-sm">
+    <div class="d-flex align-items-center">
+      <img src="uploads/product1.jpg" alt="Product 1">
+      <div class="ms-3">
+        <h6>Product A</h6>
+        <p class="mb-1">Price: $50</p>
+        <input type="number" class="form-control quantity-input" value="1" min="1">
+      </div>
+    </div>
+    <div class="text-end">
+      <p class="mb-2">Subtotal: $50</p>
+      <button class="btn btn-danger btn-sm">Remove</button>
+    </div>
+  </div>
+
+  <div class="cart-card cart-item d-flex align-items-center justify-content-between shadow-sm">
+    <div class="d-flex align-items-center">
+      <img src="uploads/product2.jpg" alt="Product 2">
+      <div class="ms-3">
+        <h6>Product B</h6>
+        <p class="mb-1">Price: $75</p>
+        <input type="number" class="form-control quantity-input" value="2" min="1">
+      </div>
+    </div>
+    <div class="text-end">
+      <p class="mb-2">Subtotal: $150</p>
+      <button class="btn btn-danger btn-sm">Remove</button>
+    </div>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="card shadow-lg p-3">
+    <h5>Cart Summary</h5>
+    <p>Total Items: 3</p>
+    <p>Total Amount: $200</p>
+    <button class="btn btn-green w-100">Proceed to Checkout</button>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
