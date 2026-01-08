@@ -2,13 +2,33 @@
 // Start the session
 session_start();
 
-// Unset all of the session variables
-$_SESSION = array();
+// Unset all session variables
+$_SESSION = [];
 
-// Destroy the session.
+// Destroy the session
 session_destroy();
 
-// Redirect to the login page or home page
-header("Location: ../index.html");
-exit(); // Important to stop further script execution
+// Optional: Delete session cookie (extra security)
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(
+        session_name(),
+        '',
+        time() - 42000,
+        $params["path"],
+        $params["domain"],
+        $params["secure"],
+        $params["httponly"]
+    );
+}
+
+// Return JSON response (for AJAX)
+echo json_encode([
+    "status" => "success",
+    "message" => "Logged out successfully"
+]);
+
+// OR redirect to login page (uncomment if needed)
+// header("Location: /login.html");
+// exit;
 ?>
