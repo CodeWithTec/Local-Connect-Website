@@ -23,12 +23,12 @@ if (ini_get("session.use_cookies")) {
 }
 
 // Return JSON response (for AJAX)
-echo json_encode([
-    "status" => "success",
-    "message" => "Logged out successfully"
-]);
+// echo json_encode([
+//     "status" => "success",
+//     "message" => "Logged out successfully"
+// ]);
 
 // OR redirect to login page (uncomment if needed)
-// header("Location: /login.html");
+ header("Location: ../login.html");
 // exit;
 ?>
