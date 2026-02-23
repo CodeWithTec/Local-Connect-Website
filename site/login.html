@@ -59,7 +59,7 @@
  <nav class="navbar">
         <div class="logo">LC-Official</div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="about_lc.html">About LC</a></li>
             <li><a href="branches.html">Branches</a></li>
             <li><a href="partners.html">Partners</a></li>
@@ -82,15 +82,15 @@
 
     <h3 class="text-center mb-4 text-success">Login</h3>
 
-    <form>
+    <form action="../backend/login.php" method="POST" >
       <div class="mb-3">
         <label class="form-label">Email address</label>
-        <input type="email" class="form-control" placeholder="Enter email" required>
+        <input name="email" type="email" class="form-control" placeholder="Enter email" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="Enter password" required>
+        <input name="password" type="password" class="form-control" placeholder="Enter password" required>
       </div>
 
       <div class="d-flex justify-content-between align-items-center mb-3">
